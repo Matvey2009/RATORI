@@ -8,4 +8,4 @@ if __name__ == '__main__':
     if local_version < game_version:
         print("Обновить версию")
     else:
-        game.game_cycle
+        game.game_cycle()
