@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec8218e2-5705-41ac-88dd-a59d13c12975" name="Default Changelist" comment="" />
+    <list default="true" id="ec8218e2-5705-41ac-88dd-a59d13c12975" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/Game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Unit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RATORI.py" beforeDir="false" afterPath="$PROJECT_DIR$/RATORI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../HardChildhood/Python/Lessons/Команды.py" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="RATORI" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -64,5 +71,16 @@
       <updated>1607188901908</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
