@@ -2,8 +2,9 @@ import pygame as pg
 
 class Unit(object):
     pg.init()
+    sound = pg.mixer.Sound('sounds\\S.mp3')
 
-    _image_ = pg.image.load('images\\fon.png')
+    _image_ = pg.image.load('images\\bag.png')
 
     # Unit
     def __init__(self):
@@ -12,4 +13,6 @@ class Unit(object):
 
     # Отрисовка
     def draw(self, g):
-        g.blit(self.image, (self.rect.x, self.rect.y))
+        self.rect.x+=1
+        g.blit(self.image, self.rect)
+        if self.rect.x == 100:(pg.mixer.Sound.play(self.sound))

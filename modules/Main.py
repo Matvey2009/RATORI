@@ -7,12 +7,13 @@ class Main(object):
     #БАЗОВАЙ ЗАПУСК
     def __init__(self):
         self.local_version = 1
+        self.flag = pg.RESIZABLE
         self.widht = 1280
         self.height = 720
         self.fps = 60
         self.menu_state = True
 
-        pg.display.set_mode((self.widht, self.height))
+        pg.display.set_mode((self.widht, self.height), self.flag)
         icon = pg.image.load('images\\iconPNG.png')
         pg.display.set_icon(icon)
         pg.display.set_caption('RATORI')
@@ -34,6 +35,13 @@ class Main(object):
                 if e.type == pg.QUIT:
                     pg.quit()
                     quit()
+                if e.type == pg.KEYDOWN and e.key == pg.K_F11:
+                    if g.get_flags() & pg.FULLSCREEN:
+                        self.flag = pg.RESIZABLE
+                    else:
+                        self.flag = pg.FULLSCREEN
+                    pg.display.set_mode((self.widht, self.height), self.flag)
+
                 #Menu drop game
                 if e.type == pg.KEYUP and e.key == pg.K_ESCAPE:
                     self.menu_state = not self.menu_state
@@ -46,4 +54,4 @@ class Main(object):
                 self.game.draw(g)
 
             pg.time.Clock().tick(self.fps)
-            pg.display.update()
+            pg.display.flip()
