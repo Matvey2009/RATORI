@@ -30,6 +30,8 @@ class Main(object):
         g = pg.display.get_surface()
 
         while self.game_state:
+
+            # ______ ___ _____ _____ ____
             for e in pg.event.get():
                 # Выход из игры
                 if e.type == pg.QUIT:
@@ -45,6 +47,11 @@ class Main(object):
                 #Menu drop game
                 if e.type == pg.KEYUP and e.key == pg.K_ESCAPE:
                     self.menu_state = not self.menu_state
+
+            if self.menu_state == True:
+                self.menu.update(e)
+            else:
+                self.game.update(e)
 
             # Обнавление меню
             if self.menu_state:
