@@ -3,15 +3,22 @@ from modules.Button import Button
 
 class Menu(object):
 
-    # MENU
+    button_name = ['start', '2', '3', '4', '5', '6', '7', 'Выход']
+
     def __init__(self):
-        self.button = Button()
+        ''' MENU '''
+        self.list_button = []
+        for i in range(8):
+            button = Button(200, 100, self.button_name[i])
+            self.list_button.add(button)
 
     #Обнавление
     def update(self, e):
+        ''' Обнавление '''
         pass
 
-    # Отрисовка
     def draw(self, g):
+        ''' Отрисовка '''
         g.fill('yellow')
-        self.button.draw(g)
+        for i in self.list_button:
+            self.list_button[i].draw(g)
