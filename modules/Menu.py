@@ -3,22 +3,27 @@ from modules.Button import Button
 
 class Menu(object):
 
-    button_name = ['start', '2', '3', '4', '5', '6', '7', 'Выход']
+    button_name = ['Start', 'Options', 'Loading', 'Safe', 'AddGame', 'Proceed ', '7', 'Exit']
 
     def __init__(self):
         ''' MENU '''
         self.list_button = []
         for i in range(8):
-            button = Button(200, 100, self.button_name[i])
-            self.list_button.add(button)
+            pos_x = 300
+            pos_y = 100 * i + 50
+            if i >= 4:
+                pos_x = 650
+                pos_y = 100 * i - 350
 
-    #Обнавление
+            button = Button(pos_x, pos_y + 100, self.button_name[i])
+            self.list_button.append(button)
+
     def update(self, e):
         ''' Обнавление '''
         pass
 
     def draw(self, g):
         ''' Отрисовка '''
-        g.fill('yellow')
-        for i in self.list_button:
-            self.list_button[i].draw(g)
+        g.fill('black')
+        for button in self.list_button:
+            button.draw(g)
