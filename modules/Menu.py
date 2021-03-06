@@ -3,7 +3,7 @@ from modules.Button import Button
 
 class Menu(object):
 
-    button_name = ['Start', 'Options', 'Loading', 'Safe', 'AddGame', 'Proceed ', '7', 'Exit']
+    button_name = ['START', 'OPTIONS', 'LOADING', 'SAFE', 'ADDGAME', 'PROCEED ', '0110101011', 'EXIT']
 
     def __init__(self):
         ''' MENU '''

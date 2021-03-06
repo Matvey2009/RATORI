@@ -3,7 +3,7 @@ import pygame
 
 class Button(object):
     pg.font.init()
-    _font_ = pg.font.SysFont("matrix", 42)
+    _font_ = pg.font.Font("images/fonts_matrix_cyr.ttf", 36)
 
     def __init__(self, pos_x, pos_y, name):
         ''' Unit '''
@@ -15,9 +15,8 @@ class Button(object):
 
     def draw(self, g):
         ''' Отрисовка '''
-        pg.draw.rect(g, '#0025FF', self.rect)
-        pg.draw.rect(g, '#0025FF', self.rect, 5)
-        self.text_button = self._font_.render(self.name, True, '#F8FF0D')
+        pg.draw.rect(g, '#047A00', self.rect, 5)
+        self.text_button = self._font_.render(self.name, True, '#047A00')
         self.text_rect = self.text_button.get_rect()
         self.text_rect.center = self.rect.center
         g.blit(self.text_button, self.text_rect)
