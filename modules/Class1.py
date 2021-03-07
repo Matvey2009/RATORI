@@ -29,3 +29,11 @@ class Class1(object):
         g.blit(self.text, (350, 50))
         pygame.draw.rect(g, ('black'), (0, 0, 800, 600), 10)
 
+        # Колизия
+        def TEST(self, pos):
+            if (pos[0] > self.rect.x and pos[0] < self.rect.x + self.rect.width
+                    and pos[1] > self.rect.y and pos[1] < self.rect.y + self.rect.height):
+                return True
+            else:
+                return False
+
