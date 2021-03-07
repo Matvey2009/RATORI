@@ -7,6 +7,7 @@
     <list default="true" id="ec8218e2-5705-41ac-88dd-a59d13c12975" name="Default Changelist" comment="Button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Button.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Class1.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Class1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615054760498</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Button">
+      <created>1615056720263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615056720263</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
