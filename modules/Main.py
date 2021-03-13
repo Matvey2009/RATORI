@@ -8,11 +8,11 @@ class Main(object):
     def __init__(self):
         self.local_version = 1
         self.flag = pg.RESIZABLE
-        self.size = self.widht, self.height = 1280, 720
+        self.size = self.width, self.height = 1280, 720
         self.fps = 60
         self.menu_state = True
 
-        pg.display.set_mode((self.widht, self.height), self.flag)
+        pg.display.set_mode(self.size, self.flag)
         icon = pg.image.load('images\\iconPNG.png')
         pg.display.set_icon(icon)
         pg.display.set_caption('RATORI')
