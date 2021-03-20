@@ -25,8 +25,7 @@ class Menu(object):
                 btn_pos = self.positon(i)
                 self.list_button[i].rect.x = btn_pos[0]
                 self.list_button[i].rect.y = btn_pos[1]
-        if e.type == pg.MOUSEMOTION:
-            self.button_action = None
+
         pos = pg.mouse.get_pos()
         click = pg.mouse.get_pressed(3)
         for button in self.list_button:
@@ -37,6 +36,7 @@ class Menu(object):
                     self.function(button.name)
                 else:
                     button.pressed = False
+                    self.button_action = None
             else:
                 button.focus = False
             button.update()
@@ -46,10 +46,29 @@ class Menu(object):
         g.fill('black')
         for button in self.list_button:
             button.draw(g)
+
+
     def function (self, button_name):
-        if button_name == 'EXIT':
-            pg.quit()
-            quit()
+        """ Функции Кнопок """
+        if self.button_action != button_name:
+            self.button_action = button_name
+            if button_name == self.button_name[0]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[1]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[2]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[3]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[4]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[5]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[6]:
+                print('Нажата кнопка', button_name)
+            if button_name == self.button_name[7]:
+                pg.quit()
+                quit()
 
     def positon(self, i):
         """ Позицыя """
