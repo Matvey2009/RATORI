@@ -4,13 +4,12 @@ from modules.Game import Game
 
 class Main(object):
 
-    #БАЗОВАЙ ЗАПУСК
     def __init__(self):
+        """ Базовый запуск """
         self.local_version = 1
         self.flag = pg.RESIZABLE
         self.size = self.width, self.height = 1280, 720
         self.fps = 60
-        self.menu_state = True
 
         pg.display.set_mode(self.size, self.flag)
         icon = pg.image.load('images\\iconPNG.png')
@@ -20,7 +19,7 @@ class Main(object):
     #Game pass
     def game_start(self):
         self.menu = Menu(self.size)
-        self.game = Game()
+        self.game = Game(self.size)
         self.game_state = True
         self.game_cycle()
 
@@ -45,17 +44,16 @@ class Main(object):
 
                 #Menu drop game
                 if e.type == pg.KEYUP and e.key == pg.K_ESCAPE:
-                    self.menu_state = not self.menu_state
+                    self.menu.menu_state = not self.menu.menu_state
 
-            if self.menu_state == True:
+            if self.menu.menu_state == True:
                 self.menu.update(e)
             else:
                 self.game.update(e)
 
             # Обнавление меню
-            if self.menu_state:
+            if self.menu.menu_state:
                 self.menu.draw(g)
-            # Обнавление меню
             else:
                 self.game.draw(g)
 

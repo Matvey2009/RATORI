@@ -7,6 +7,7 @@ class Menu(object):
 
     def __init__(self, size):
         """ Menu """
+        self.menu_state = True
         self.size = size
         self.list_button = []
         for i in range(8):
@@ -53,7 +54,7 @@ class Menu(object):
         if self.button_action != button_name:
             self.button_action = button_name
             if button_name == self.button_name[0]:
-                print('Нажата кнопка', button_name)
+                self.menu_state = False
             if button_name == self.button_name[1]:
                 print('Нажата кнопка', button_name)
             if button_name == self.button_name[2]:
